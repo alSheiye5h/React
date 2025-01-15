@@ -8,14 +8,12 @@ function App() {
   let user = {
     name: "alSheiye5h",
     bio: "anything for the bio",
+    rank: 152,
     payed: true,
   }
 
   return (
-    <>
     <Card {...user}/>
-      
-    </>
     )
 }
 
