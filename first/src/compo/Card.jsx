@@ -23,4 +23,11 @@ Card.propTypes = {
     payed: propTypes.bool.isRequired,
 }
 
+Card.defaultProps = {
+    name: "Guest",
+    bio: "the user didn't set bio yet",
+    rank: 0,
+    payed: false,
+}
+
 export default Card

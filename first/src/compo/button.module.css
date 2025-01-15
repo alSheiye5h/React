@@ -3,3 +3,11 @@
     cursor: pointer;
     color: blanchedalmond;
 }  
+
+.button {
+    padding: 1% 5%;
+    color: rgb(0, 0, 0);
+    border: 0cap;
+    outline: none;
+    border-radius: 10px;
+}

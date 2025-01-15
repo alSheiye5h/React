@@ -2,18 +2,20 @@ import buttonStyle from './button.module.css'
 
 function Button({check}) {
 
-    let styles = {
-        padding: "1% 5%",
-        color: "rgb(0, 0, 0)",
-        border: "0cap",
-        outline: "none",
-       borderRadius: "10px",
-       pointerEvent: check ? "auto" : "none",
-       backgroundColor: check ? "rgb(29, 172, 255)" : "rgba(0, 0, 0, 0)",
-    }
+    let cont = {
+        pointerEvent: "auto",
+        backgroundColor: "rgb(29, 172, 255)" ,
+    };
+    let disCont = {
+        pointerEvent: "none",
+        backgroundColor: "rgba(29, 172, 255, 0.5)",
+    };
+
+    let continu = <button  style={cont} className={buttonStyle.button}>Continue</button>;
+    let disContinu = <button  style={disCont} className={buttonStyle.button}>Continue</button>;
 
     return (
-        <button  style={styles} className={buttonStyle.button}>Click me</button>
+        check ? continu : disContinu
     )
 }
 

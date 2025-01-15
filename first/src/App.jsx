@@ -9,7 +9,7 @@ function App() {
     name: "alSheiye5h",
     bio: "anything for the bio",
     rank: 152,
-    payed: true,
+    payed: false,
   }
 
   return (
