@@ -7,7 +7,8 @@ function App() {
 
   let user = {
     name: "alSheiye5h",
-    bio: "anything for the bio"
+    bio: "anything for the bio",
+    payed: true,
   }
 
   return (

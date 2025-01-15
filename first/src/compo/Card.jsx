@@ -2,13 +2,13 @@ import imgprof from '../assets/images.jpeg'
 import Button from './Button'
 
 
-function Card({name, bio}) {
+function Card({name, bio, payed}) {
     return (
         <div className='card'>
             <img className="img1" src={imgprof} alt="" />
             <h1 className="username" >{name}</h1>
             <p>{bio}</p>
-            <Button/>
+            <Button check={payed} />
         </div>
     )
 }
