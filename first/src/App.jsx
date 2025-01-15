@@ -1,6 +1,7 @@
 import Header from './compo/Header'
 import Footer from './compo/Footer'
 import Card from './compo/Card'
+import List from './compo/List'
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
   }
 
   return (
+    <>
     <Card {...user}/>
+    <List/>
+    </>
     )
 }
 
