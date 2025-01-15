@@ -10,16 +10,36 @@ function App() {
     name: "alSheiye5h",
     bio: "anything for the bio",
     rank: 152,
-    payed: false,
+    payed: true,
   }
 
+  let languages = [
+    { name: "html", more: 50},
+    { name: "css", more: 40},
+    { name: "js", more: 60},
+    { name: "python", more: 55},
+    { name: "rust", more: 49},
+    { name: "C", more: 20},
+  ];
+
+  let projects = [
+    {name: "chatApp", more: "rust"},
+    {name: "webSite", more: "vue.js"},
+    {name: "xo_Game", more: "javascript"},
+  ]
+
+
+
   return (
-    <>
+    <div style={{display: 'flex', alignItems: "center"}}>
     <Card {...user}/>
-    <List/>
-    </>
+    <List items={languages} categorie="languages"/>
+    <List items={projects} categorie="projects"/>
+    </div>
     )
 }
+
+
 
 export default App
 

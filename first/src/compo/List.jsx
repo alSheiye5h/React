@@ -1,21 +1,39 @@
 
 
-function List() {
-    let list = [
-        {id: 1, lang: "html, css", rank: 50},
-        {id: 2, lang: "js", rank: 60},
-        {id: 3, lang: "python", rank: 55},
-        {id: 4, lang: "rust", rank: 49},
-        {id: 5, lang: "C", rank: 20},
-    ];
-
-    let listElements = list.map((e) => {
-        return <li key={e.id}>{e.lang} :: {e.rank} </li>
+function List(props) {
+    
+    let items =  props.items;
+    let categorie = props.categorie.length > 0 ? props.categorie : "Cartegorie" ;
+    let listElements = items.map((e, index) => {
+        return <li key={index}>{e.name} :=: {e.more} </li>
     })
 
+    let style = {
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
+    }
+
+    let divStyle = {
+        marginLeft: "20px",
+    }
+
     return (
-        <ul>{listElements}</ul>
+        <div style={divStyle}>
+            <h3>{categorie} :</h3>
+            <ul style={style} >{listElements}</ul>
+        </div>
     )
+}
+
+List.propTypes = {
+    items: propTypes.arrayOf(propTypes.shape({name: propTypes.string, more: propTypes.oneOfType([propTypes.string, propTypes.number])})), 
+    
+}
+
+List.defaultProps = {
+    categorie: "Cartegorie",
+    items: [],
 }
 
 export default List
