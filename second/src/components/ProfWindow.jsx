@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 function ProfWindow({user}) {
     let {img, username, role, bio, contributions} = user
     let rendred = 
-    <div className="ProfWindow">
+    <div className="window">
         <img src={img} alt="profileImage" className='profileImage' />
         <p className='username'>{username}</p>
         <span className='role'>{role}</span>

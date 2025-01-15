@@ -13,9 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ProfWindow {
+.cards {
+  display: flex;
+  align-items: center;
+}
+
+.window {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: fit-content;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +28,7 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   margin: 3% 0 0 3%;
   padding: 1%;
+  height: 400px;
 }
 
 .profileImage {
@@ -47,6 +53,52 @@
   width: 350px;
   text-align: center;
   border-radius: 6px;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(26, 25, 25);
 }
 
+.contributions {
+  color: rgb(36, 36, 36);
+  background-color: rgba(277, 277, 277, 0.8);
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.ull {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: square;
+}
+
+.Languages {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 95%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.yesButtons,
+.NoButtons {
+  border: 0cap;
+  outline: none;
+  margin-left: 30px;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.yesButtons:hover,
+.NoButtons:hover {
+  cursor: pointer;
+  opacity: 0.8;
+} 
+
+.yesButtons {
+  background-color: green;
+}
+
+.NoButtons {
+  background-color: red;
+}

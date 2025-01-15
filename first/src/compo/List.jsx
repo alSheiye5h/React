@@ -28,7 +28,6 @@ function List(props) {
 
 List.propTypes = {
     items: propTypes.arrayOf(propTypes.shape({name: propTypes.string, more: propTypes.oneOfType([propTypes.string, propTypes.number])})), 
-    
 }
 
 List.defaultProps = {
