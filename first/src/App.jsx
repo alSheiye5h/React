@@ -1,13 +1,21 @@
-import Header from './compo/header'
+import Header from './compo/Header'
+import Footer from './compo/Footer'
+import Card from './compo/Card'
 
 
 function App() {
 
-  return (
-    <Header>
+  let user = {
+    name: "alSheiye5h",
+    bio: "anything for the bio"
+  }
 
-    </Header>
-  )
+  return (
+    <>
+    <Card />
+      
+    </>
+    )
 }
 
 export default App
