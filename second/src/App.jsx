@@ -12,7 +12,8 @@ function App() {
     img: profileImage,
     username: "alSheiy5h",
     role: "admin",
-    bio: "creating random code, just remembring the react skills"
+    bio: "creating random code, just remembring the react skills",
+    contributions: 28,
   }
 
   return (
