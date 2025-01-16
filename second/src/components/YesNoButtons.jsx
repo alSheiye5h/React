@@ -32,13 +32,43 @@ function YesNoButtons() {
     }
 
 
+    let [comment, setComment] = useState("");
+
+    function commentChange(event) {
+        setComment(event.target.value)
+    }
+
+    let postComment = () => {
+        if (comment.length <= 0)
+            return alert(`post failed: no comment provided`);
+        alert(`${comment} has been posted succefully`);
+    }
+    
+    let cmntShow = comment.length > 0 ? <p className="cmntDiv">Comment show : {comment}</p> : "";
+
     return (
-        <>
-        <button className="yesButtons" onClick={incrementG} >Good</button>   
-        <p className="counts">{goods}</p>
-        <p className="counts">{bads}</p>     
-        <button className="NoButtons" onClick={incrementB} >Bad</button>        
-        </>
+        <div className="window" style={{width: "fit-content"}}>
+            <div className="rateDiv">
+                <button className="yesButtons" onClick={incrementG} >Good</button>   
+                <p className="counts">{goods}</p>
+                <p className="counts">{bads}</p>     
+                <button className="NoButtons" onClick={incrementB} >Bad</button>        
+            </div>
+            <br />
+            <br />
+            {cmntShow}
+            <div className="cmntDiv">
+                <input type="text" className="comment" value={comment} onChange={commentChange}/>
+                <button className="commentButton" onClick={postComment}>post</button>
+            </div>
+            <select name="" id="">
+                <option value="robust"></option>
+                <option value="randomly"></option>
+                <option value="fether"></option>
+
+
+            </select>
+        </div>
     )
 }
 

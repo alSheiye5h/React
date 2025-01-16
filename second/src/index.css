@@ -124,3 +124,38 @@
   border-radius: 7px;
   background-color: rgb(56, 56, 56);
 }
+
+.rateDiv {
+  display: flex;
+  align-items: center;
+}
+
+.cmntDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment {
+  width: 70%;
+  padding: 5px 13px;
+  border: 0cap;
+  outline: none;
+  border-radius: 10px;
+}
+
+.commentButton {
+  margin-left: 10px;
+  padding: 5px 18px;
+  border-radius: 10px;
+  border: 0cap;
+  outline: none;
+  color: rgb(255, 254, 254);
+  font-weight: bold;
+  background-color: rgba(18, 18, 18, 0.9);
+}
+
+.commentButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
