@@ -3,6 +3,7 @@ import ProfWindow from './components/ProfWindow'
 import Language from './components/Language'
 import YesNoButtons from './components/YesNoButtons'
 import profileImage from './assets/images.jpeg'
+import ColorPicker from './components/ColorPicker.jsx'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <ProfWindow user={user}/>
       <Language user={user}/>
       <YesNoButtons user={user}/>
+      <ColorPicker />
     </div>
   )
 }
