@@ -116,3 +116,11 @@
 .NoButtons {
   background-color: red;
 }
+
+.counts {
+  margin-left: 20px;
+  border: 1px solid rgb(56, 56, 56);
+  padding: 0px 15px;
+  border-radius: 7px;
+  background-color: rgb(56, 56, 56);
+}

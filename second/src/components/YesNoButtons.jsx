@@ -20,10 +20,24 @@ function YesNoButtons() {
     //     setBad("enought")
     // }
 
+    let [goods, setGoods] = useState(0);
+    let [bads, setBads] = useState(0);
+
+    let incrementG = () => {
+        setGoods(goods + 1);
+    }
+
+    let incrementB = () => {
+        setBads(bads + 1);
+    }
+
+
     return (
         <>
-        <button className="yesButtons" onClick={handleYes} >Good</button>        
-        <button className="NoButtons" onClick={handleNo} onDoubleClick={handleDoubleNo} >{bad}</button>        
+        <button className="yesButtons" onClick={incrementG} >Good</button>   
+        <p className="counts">{goods}</p>
+        <p className="counts">{bads}</p>     
+        <button className="NoButtons" onClick={incrementB} >Bad</button>        
         </>
     )
 }
