@@ -1,10 +1,22 @@
 import propTypes from 'prop-types'
 
 function ProfWindow({user}) {
+
+    let imgClick = (e) => {
+        const image = e.target;
+
+        image.classList.add("rotate");
+
+        setTimeout(() => {
+            image.classList.remove("rotate");
+          }, 700);
+    }
+
+
     let {img, username, role, bio, contributions} = user
     let rendred = 
     <div className="window">
-        <img src={img} alt="profileImage" className='profileImage' />
+        <img src={img} onClick= {imgClick} alt="profileImage" className='profileImage' />
         <p className='username'>{username}</p>
         <span className='role'>{role}</span>
         <p className='bio'>{bio}</p>

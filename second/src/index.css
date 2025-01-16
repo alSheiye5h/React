@@ -35,6 +35,20 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  transition: transform 1s ease-in-out; 
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate360 0.7s linear;
 }
 
 .username {
