@@ -33,9 +33,10 @@ function YesNoButtons() {
 
 
     let [comment, setComment] = useState("");
+    let [selectdVal, setSelectdVal] = useState("");
 
     function commentChange(event) {
-        setComment(event.target.value)
+        setComment(event.target.value);
     }
 
     let postComment = () => {
@@ -43,8 +44,17 @@ function YesNoButtons() {
             return alert(`post failed: no comment provided`);
         alert(`${comment} has been posted succefully`);
     }
+
+    function changeSelectdVal(event) {
+        setSelectdVal(event.target.value)
+    }
+
+    let cmntInp = {visibility: comment.length > 0 ? 'visible' : 'Hidden'};
+    let cmntInp1 = {visibility: selectdVal.length > 0 ? 'visible' : 'Hidden'};
     
-    let cmntShow = comment.length > 0 ? <p className="cmntDiv">Comment show : {comment}</p> : "";
+    let cmntShow = comment.length > 0 ? <p style={cmntInp} >Comment show : {comment}</p> : <p style={cmntInp} >dzadz</p>;
+
+    let selectd = selectdVal.length > 0 ? <p style={cmntInp1} >Choosed : {selectdVal}</p> : <p style={cmntInp1} >dzadz</p>;
 
     return (
         <div className="window" style={{width: "fit-content"}}>
@@ -61,12 +71,12 @@ function YesNoButtons() {
                 <input type="text" className="comment" value={comment} onChange={commentChange}/>
                 <button className="commentButton" onClick={postComment}>post</button>
             </div>
-            <select name="" id="">
-                <option value="robust"></option>
-                <option value="randomly"></option>
-                <option value="fether"></option>
-
-
+            <br /><br />
+            {selectd}
+            <select name="" onChange={changeSelectdVal} className="selectButton">
+                <option value="robust">robust</option>
+                <option value="randomly">randomly</option>
+                <option value="fether">fether</option>
             </select>
         </div>
     )

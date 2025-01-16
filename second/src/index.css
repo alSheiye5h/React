@@ -159,3 +159,18 @@
   cursor: pointer;
   opacity: 0.8;
 }
+
+.selectButton {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: none;
+  padding: 5px 0;
+}
+
+.selectButton:hover {
+  cursor: pointer;
+}
+
