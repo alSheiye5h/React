@@ -78,6 +78,17 @@ function YesNoButtons() {
                 <option value="randomly">randomly</option>
                 <option value="fether">fether</option>
             </select>
+            <br />
+            <div className="radioDiv">
+                <span>
+                    <label htmlFor="new">new</label>
+                    <input type="radio" name="new" />  
+                </span>
+                <span>
+                    <label htmlFor="old">old</label>
+                    <input type="radio" name="old"/>   
+                </span>
+            </div>
         </div>
     )
 }

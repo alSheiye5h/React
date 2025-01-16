@@ -174,3 +174,9 @@
   cursor: pointer;
 }
 
+.radioDiv {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
