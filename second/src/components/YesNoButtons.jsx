@@ -34,6 +34,7 @@ function YesNoButtons() {
 
     let [comment, setComment] = useState("");
     let [selectdVal, setSelectdVal] = useState("");
+    let [radioStateVal, setState] = useState("new");
 
     function commentChange(event) {
         setComment(event.target.value);
@@ -49,12 +50,26 @@ function YesNoButtons() {
         setSelectdVal(event.target.value)
     }
 
+    function radioState(event) {
+        setState(event.target.value)
+    }
+
     let cmntInp = {visibility: comment.length > 0 ? 'visible' : 'Hidden'};
     let cmntInp1 = {visibility: selectdVal.length > 0 ? 'visible' : 'Hidden'};
     
     let cmntShow = comment.length > 0 ? <p style={cmntInp} >Comment show : {comment}</p> : <p style={cmntInp} >dzadz</p>;
 
     let selectd = selectdVal.length > 0 ? <p style={cmntInp1} >Choosed : {selectdVal}</p> : <p style={cmntInp1} >dzadz</p>;
+
+    let radioP = {
+        backgroundColor: radioStateVal === "new" ? "rgb(21, 126, 237)" : "rgb(180, 208, 237)",
+        padding: "2px 0px",
+        width: "15%",
+        textAlign: "center",
+        borderRadius: "10px",
+        fontWeight: "bold",
+        color: radioStateVal === "new" ? "white" : "rgb(49, 49, 49)",
+    }
 
     return (
         <div className="window" style={{width: "fit-content"}}>
@@ -82,13 +97,14 @@ function YesNoButtons() {
             <div className="radioDiv">
                 <span>
                     <label htmlFor="new">new</label>
-                    <input type="radio" name="new" />  
+                    <input type="radio" value="new" checked={radioStateVal === "new"} onChange={radioState}/>  
                 </span>
                 <span>
                     <label htmlFor="old">old</label>
-                    <input type="radio" name="old"/>   
+                    <input type="radio" value="old" checked={radioStateVal === "old"} onChange={radioState}/>   
                 </span>
             </div>
+            <p style={radioP}>{radioStateVal}</p>
         </div>
     )
 }
