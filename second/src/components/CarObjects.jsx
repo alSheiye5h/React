@@ -17,9 +17,9 @@ function CarObjects() {
     ])
 
     let [carObj, setCarObj] = useState({
-        year: 1000,
+        year: "",
         color: "",
-        model: ""
+        model: "",
     });
 
     let [carColor, setCarColor] = useState("");
@@ -27,31 +27,27 @@ function CarObjects() {
     let [carModel, setCarModel] = useState("");
 
     function changeModel(event) {
-        setCarModel(event.target.value)
+        setCarObj((prev) => ({ ...prev, model: event.target.value }))
     }
 
     function changeYear(event) {
-        setCarYear(event.target.value)
+        setCarObj((prev) => ({ ...prev, year: event.target.value }))
     }
 
     function changeColor(event) {
-        setCarColor(event.target.value)
-    }
-
-
-    function carElements() {
-        setCarObj(o => ({...o,
-            year: carYear,
-            color: carColor,
-            model: carModel
-        }))
+        setCarObj((prev) => ({ ...prev, color: event.target.value }))
     }
     
+    function addCar() {
+        const { year, color, model } = carObj;
 
-    function addCar(event) {
-        if (carColor.length > 0 || carYear.length != 0 || carModel.length > 0) {
-            carElements();
-            setCarList(arr => [...arr, carObj]);
+        if (model.trim() && color.trim() && year.trim() && !isNaN(year)) {
+            setCarList((prevList) => [...prevList, carObj]);
+            setCarObj({ year: "", color: "", model: "" }); 
+        } else if (isNaN(year)) {
+            alert("year need to be a number");
+        } else {
+            alert("Please fill out all fields correctly.");
         }
     }
 
@@ -64,11 +60,11 @@ function CarObjects() {
         </ul>
         <br />
         <label htmlFor="">model :</label>
-        <input type="text" className="" value={carModel} onChange={changeModel} />
+        <input type="text" className="" value={carObj.model} onChange={changeModel} />
         <label htmlFor="">year :</label>
-        <input type="text" className="" value={carYear} onChange={changeYear} />
+        <input type="text" className="" value={carObj.year} onChange={changeYear} />
         <label htmlFor="">color :</label>
-        <input type="text" className="" value={carColor} onChange={changeColor} />
+        <input type="text" className="" value={carObj.color} onChange={changeColor} />
         <br />
         <button onClick={addCar} >add car</button>
     </div>
