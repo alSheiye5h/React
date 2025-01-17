@@ -196,3 +196,17 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+.finp {
+  width: 250px;
+  padding: 5px 10px;
+}
+
+.fbtn {
+  padding: 5px 10px;
+}
+
+.fbtn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
