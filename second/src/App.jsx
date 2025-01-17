@@ -3,7 +3,7 @@ import ProfWindow from './components/ProfWindow'
 import Language from './components/Language'
 import YesNoButtons from './components/YesNoButtons'
 import profileImage from './assets/images.jpeg'
-import ColorPicker from './components/ColorPicker.jsx'
+import ColorPicker from './components/ColorPicker'
 
 
 function App() {

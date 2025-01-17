@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { color } from "./ColorPicker";
 
 
 
@@ -25,11 +24,11 @@ function YesNoButtons() {
     let [bads, setBads] = useState(0);
 
     let incrementG = () => {
-        setGoods(goods + 1);
+        setGoods(g => g + 1);
     }
 
     let incrementB = () => {
-        setBads(bads + 1);
+        setBads((b) => { return b + 1 });
     }
 
 
