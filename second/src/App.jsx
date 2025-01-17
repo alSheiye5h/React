@@ -7,6 +7,7 @@ import ColorPicker from './components/ColorPicker'
 import FavCar from './components/FavCar'
 import FoodList from './components/FoodList'
 import Infos from './components/Infos'
+import CarObjects from './components/CarObjects'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <FavCar />
       <FoodList />
       <Infos />
+      <CarObjects />
     </div>
   )
 }
