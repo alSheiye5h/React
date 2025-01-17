@@ -22,7 +22,7 @@ function FavCar() {
     }
 
     return(
-        <div className="window" style={{width: "fit-content"}}>
+        <div className="window" >
             <h3>Favourite Car :</h3>
             <p>-- model: {car.model}</p>
             <p>-- color: {car.color}</p>

@@ -12,7 +12,7 @@ function ColorPicker() {
     }
 
     return (        
-    <div className="window" style={{width: "fit-content"}}>
+    <div className="window" >
         <div className="colorBoard" style={{backgroundColor: color, borderColor: color}}>
 
         </div>
