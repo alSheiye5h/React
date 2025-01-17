@@ -4,6 +4,7 @@ import Language from './components/Language'
 import YesNoButtons from './components/YesNoButtons'
 import profileImage from './assets/images.jpeg'
 import ColorPicker from './components/ColorPicker'
+import FavCar from './components/FavCar'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Language user={user}/>
       <YesNoButtons user={user}/>
       <ColorPicker />
+      <FavCar />
     </div>
   )
 }
