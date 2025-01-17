@@ -10,15 +10,15 @@ function FavCar() {
     });
 
     function setCarModel(event) {
-        setCar(c => ({...c, model: event.target.model}));
+        setCar(c => ({...c, model: event.target.value}));
     }
 
     function setCarColor(event) {
-        setCar(c => ({...c, color: event.target.color}))
+        setCar(c => ({...c, color: event.target.value}))
     }
 
     function setCarYear(event) {
-        setCar(c => ({...c, year: event.target.year}))
+        setCar(c => ({...c, year: event.target.value}))
     }
 
     return(
@@ -34,9 +34,6 @@ function FavCar() {
             <input type="text" value={car.year} className="carInp" onChange={setCarYear}/>
         </div>
     )
-
-
-
 }
 
 export default FavCar
