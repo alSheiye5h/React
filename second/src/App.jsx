@@ -6,6 +6,7 @@ import profileImage from './assets/images.jpeg'
 import ColorPicker from './components/ColorPicker'
 import FavCar from './components/FavCar'
 import FoodList from './components/FoodList'
+import Infos from './components/Infos'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <ColorPicker />
       <FavCar />
       <FoodList />
+      <Infos />
     </div>
   )
 }
