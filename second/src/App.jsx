@@ -5,6 +5,7 @@ import YesNoButtons from './components/YesNoButtons'
 import profileImage from './assets/images.jpeg'
 import ColorPicker from './components/ColorPicker'
 import FavCar from './components/FavCar'
+import FoodList from './components/FoodList'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <YesNoButtons user={user}/>
       <ColorPicker />
       <FavCar />
+      <FoodList />
     </div>
   )
 }

@@ -21,7 +21,6 @@
 
 .window {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +29,7 @@
   margin: 3% 0 0 3%;
   padding: 1%;
   height: 400px;
+  width: 60%;
 }
 
 .profileImage {
