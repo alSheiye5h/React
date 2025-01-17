@@ -2,50 +2,41 @@ import { useState } from "react";
 
 function FavCar() {
 
+
     let [car, setCar] = useState({
-        year: 2024,
-        model: "mercedes G63",
+        model: "BMW M3",
         color: "black",
+        year: 2024,
     });
 
-    function changeCarModel(event) {
-        setCar(c => ({...c, model: event.target.value}))
+    function setCarModel(event) {
+        setCar(c => ({...c, model: event.target.model}));
     }
 
-    function changeCarColor(event) {
-        setCar(c => ({...c, color: event.target.value}))
+    function setCarColor(event) {
+        setCar(c => ({...c, color: event.target.color}))
     }
 
-    function changeCarYear(event) {
+    function setCarYear(event) {
         setCar(c => ({...c, year: event.target.year}))
     }
 
-    return (
-        <div className="window" style={{ width: "fit-content" }}>
-            <p>Your Favourite Car is a {car.color} {car.model} of year {car.year}</p>
-            <input 
-                type="text" 
-                value={car.model} 
-                className="carInp" 
-                onChange={changeCarModel} 
-                placeholder="Model"
-            />
-            <input 
-                type="text" 
-                value={car.color} 
-                className="carInp" 
-                onChange={changeCarColor} 
-                placeholder="Color"
-            />
-            <input 
-                type="number"
-                value={car.year}
-                className="carInp"
-                onChange={changeCarYear} 
-                placeholder="Year"
-            />
+    return(
+        <div className="window" style={{width: "fit-content"}}>
+            <h3>Favourite Car :</h3>
+            <p>-- model: {car.model}</p>
+            <p>-- color: {car.color}</p>
+            <p>-- year: {car.year}</p>     
+            <hr style={{width: "100%"}}/>
+            <hr style={{width: "100%"}}/>
+            <input type="text" value={car.model} className="carInp" onChange={setCarModel}/>
+            <input type="text" value={car.color} className="carInp" onChange={setCarColor}/>
+            <input type="text" value={car.year} className="carInp" onChange={setCarYear}/>
         </div>
-    );
+    )
+
+
+
 }
 
 export default FavCar
