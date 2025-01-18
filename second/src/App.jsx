@@ -30,8 +30,8 @@ function App() {
 
   return (
     <div className='cards'>
-      {/* <ProfWindow user={user}/>
-      <Language user={user}/>
+      <ProfWindow user={user}/>
+      {/* <Language user={user}/>
       <YesNoButtons user={user}/>
       <ColorPicker />
       <FavCar />
