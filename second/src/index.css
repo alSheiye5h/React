@@ -299,4 +299,15 @@
 
 .clockDiv {
   background-image: url("/second/src/assets/back.jpg");
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.clockDiv span {
+  padding: 4px;
+  background-color: #585858;
+  border-radius: 10px;
 }
