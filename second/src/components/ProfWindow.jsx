@@ -1,4 +1,5 @@
 import propTypes from 'prop-types'
+import DigitalClock from './DigitalClock'
 
 function ProfWindow({user}) {
 
@@ -19,7 +20,7 @@ function ProfWindow({user}) {
         <img src={img} onClick= {imgClick} alt="profileImage" className='profileImage' />
         <p className='username'>{username}</p>
         <span className='role'>{role}</span>
-        <p className='bio'>{bio}</p>
+        <DigitalClock />
         <span className='contributions'>{contributions}</span>
 
     </div>

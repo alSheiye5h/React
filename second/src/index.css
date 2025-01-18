@@ -296,3 +296,7 @@
   cursor: pointer;
   opacity: 0.8;
 }
+
+.clockDiv {
+  background-image: url("/second/src/assets/back.jpg");
+}
