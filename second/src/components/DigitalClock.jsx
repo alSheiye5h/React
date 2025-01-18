@@ -7,18 +7,20 @@ function DigitalClock() {
 
 
     useEffect(() => {
-        setTime(new Date())
+        let interval = setInterval(() => {
+            setTime(new Date())
+        })
 
-        return () => {}
+        return () => clearInterval(interval)
     }, [])
 
     let formatedDate = (time) => String(time).padStart(2, "0");
 
     return (
         <div className="clockDiv">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span>{formatedDate(time.getHours())} </span>:
+            <span> {formatedDate(time.getMinutes())} </span>:
+            <span> {formatedDate(time.getSeconds())}</span>
         </div>
     )
 
