@@ -1,18 +1,30 @@
 import { useState, useContext, createContext } from "react";
 import { MessageContext } from './CompoA' 
+import { DisplayContext } from './CompoB'
 
 function CompoD() {
+
+    let setDisplay = useContext(DisplayContext);
 
     let sendMsg = useContext(MessageContext);
 
     let [localMessage, setLocalMessage] = useState("");
 
     function localMessageInp(event) {
-        setLocalMessage(event.target.value)
+        const value = event.target.value;
+
+        setLocalMessage(value)
+        setDisplay("block")
+        setTimeout(() => {
+            setDisplay("none")
+        }, 1000);
     }
 
+
+
     function sendMessage() {
-        sendMsg(m => m+=localMessage)
+        setLocalMessage("")
+        sendMsg((m) => m+=localMessage)
     }
     
     return (
