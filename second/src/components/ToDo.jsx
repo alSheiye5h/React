@@ -11,7 +11,7 @@ function ToDo() {
     }
 
     function pushTask() {
-        if (task.trim("") !== "") {
+        if (task.trim() !== "") {
             setTasks(t => ([...t, task]))
             setTask("");
         } else {
@@ -24,15 +24,17 @@ function ToDo() {
     }
 
     function modifyOrder(index, opt) {
-        setTasks(old => {
-            let taskss = [...old];
+        setTasks((prevTasks) => {
+            const tasks = [...prevTasks];
             if (opt === 1 && index > 0) {
-                [taskss[index - 1], taskss[index]] = [taskss[index], taskss[index - 1]]
-            } else {
-                [taskss[index + 1], taskss[index]] = [taskss[index], taskss[index + 1]]
+                // Move task up
+                [tasks[index], tasks[index - 1]] = [tasks[index - 1], tasks[index]];
+            } else if (opt === 0 && index < tasks.length - 1) {
+                // Move task down
+                [tasks[index], tasks[index + 1]] = [tasks[index + 1], tasks[index]];
             }
-            return taskss;
-        })
+            return tasks;
+        });
     }
 
 
@@ -41,8 +43,8 @@ function ToDo() {
             <div className="taskArea">
                 <p className="taskP">{task}</p>
                 <button className="taskDel" onClick={() => delTask(index)}>delete</button>
-                <button className="taskUp" conClick={() => modifyOrder(1)} >☝️</button>
-                <button className="taskDown" conClick={() => modifyOrder(index, 0)}>👇</button>
+                <button className="taskUp" onClick={() => modifyOrder(index, 1)} >☝️</button>
+                <button className="taskDown" onClick={() => modifyOrder(index, 0)}>👇</button>
             </div>
         </div>)
     })
