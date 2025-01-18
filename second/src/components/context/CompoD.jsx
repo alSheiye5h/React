@@ -1,21 +1,20 @@
 import { useState, useContext, createContext } from "react";
-import { MessageContext } from './CompoA'
-
+import { setMessage } from './CompoA' 
 
 function CompoD() {
 
-    const setMessage = useContext(MessageContext);
+    let sendMsg = useContext(setMessage);
 
-    const [localMessage, setLocalMessage] = useState(""); 
+    let [localMessage, setLocalMessage] = useState("");
 
     function localMessageInp(event) {
         setLocalMessage(event.target.value)
     }
 
     function sendMessage() {
-        setMessage(localMessage)
+        setMessage(sendMsg)
     }
-
+    
     return (
         <div className="compoX compod" style={{flexDirection: "column", gap: "5px"}}>
             <input type="text" value={localMessage} onChange={localMessageInp} />        

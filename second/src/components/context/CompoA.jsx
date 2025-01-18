@@ -2,25 +2,22 @@ import { createContext, useState } from "react"
 
 import CompoB from "./CompoB"
 
-export const MessageContext = createContext();
+export const setMessage = createContext();
 
 function CompoA() {
 
 
-    let [message, setMessage] = useState("");
+    let [message, setMessage] = useState("sent From D:");
     
 
     return (
-        <MessageContext.Provider value={setMessage}>
             <div className="compos">
-                    <p>A: {message.length > 0 ? message : ""}</p>
+                    <p>A: {message.length > 11 ? message : ""}</p>
                     <div className="compoX compoa">
                         <p>B:</p>
                             <CompoB/>
-                </div>
+                    </div>
             </div>
-        </MessageContext.Provider>
-
     )
 }
 
