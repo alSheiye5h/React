@@ -4,26 +4,57 @@ import { useState } from "react"
 function ToDo() {
 
     let [task, setTask] = useState("");
-
+    let [tasks, setTasks] = useState([]);
+    
     function addTask(event) {
-        setTask(event.target.value)
+        setTask(event.target.value);
     }
+
+    function pushTask() {
+        if (task.trim("") !== "") {
+            setTasks(t => ([...t, task]))
+            setTask("");
+        } else {
+            alert("can't post empty task .")
+        }
+    }
+
+    function delTask(index) {
+        setTasks(tasks.filter((_, i) => i !== index));
+    }
+
+    function modifyOrder(index, opt) {
+        setTasks(old => {
+            let taskss = [...old];
+            if (opt === 1 && index > 0) {
+                [taskss[index - 1], taskss[index]] = [taskss[index], taskss[index - 1]]
+            } else {
+                [taskss[index + 1], taskss[index]] = [taskss[index], taskss[index + 1]]
+            }
+            return taskss;
+        })
+    }
+
+
+    let tasksRender = tasks.map((task, index) => {
+        return (<div key={index} className="window1">
+            <div className="taskArea">
+                <p className="taskP">{task}</p>
+                <button className="taskDel" onClick={() => delTask(index)}>delete</button>
+                <button className="taskUp" conClick={() => modifyOrder(1)} >☝️</button>
+                <button className="taskDown" conClick={() => modifyOrder(index, 0)}>👇</button>
+            </div>
+        </div>)
+    })
 
     return (
     <>
         <h1>To-Do-List</h1>
         <div className="window1">
             <input type="text" className="taskInp" value={task} onChange={addTask}/>
-            <button className="taskBtn">add</button>
+            <button className="taskBtn" onClick={pushTask}>add</button>
         </div>
-        <div className="window1">
-            <div className="taskArea">
-                <p className="taskP">any task for test</p>
-                <button className="taskDel">delete</button>
-                <button className="taskUp">☝️</button>
-                <button className="taskDown">👇</button>
-            </div>
-        </div>
+        {tasksRender}
     </>
     )
 }
