@@ -1,11 +1,26 @@
-import { useState } from "react"
+import { createContext, useState } from "react"
+
+import CompoB from "./CompoB"
+
+export const MessageContext = createContext();
 
 function CompoA() {
-    
-    return (
-        <div className="compoX">
 
-        </div>
+
+    let [message, setMessage] = useState("");
+    
+
+    return (
+        <MessageContext.Provider value={setMessage}>
+            <div className="compos">
+                    <p>A: {message.length > 0 ? message : ""}</p>
+                    <div className="compoX compoa">
+                        <p>B:</p>
+                            <CompoB/>
+                </div>
+            </div>
+        </MessageContext.Provider>
+
     )
 }
 

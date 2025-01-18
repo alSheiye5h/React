@@ -10,9 +10,7 @@ import Infos from './components/Infos'
 import CarObjects from './components/CarObjects'
 import ToDo from './components/ToDo'
 import CompoA from './components/context/CompoA'
-import CompoB from './components/context/CompoB'
-import CompoC from './components/context/CompoC'
-import CompoD from './components/context/CompoD'
+
 
 
 function App() {
@@ -44,9 +42,7 @@ function App() {
       <CarObjects /> */}
       <ToDo />
       <CompoA />
-        <CompoB />
-          <CompoC />
-            <CompoD />
+
     </div>
   )
 }
