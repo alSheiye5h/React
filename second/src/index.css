@@ -213,3 +213,49 @@
 
 }
 
+.window1 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin: 3% 0 0 3%;
+  padding: 1%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskInp {
+  width: 30%;
+  padding: 6px 10px;
+  border-radius: 7px;
+  outline: none;
+  border: 0cap;
+  background-color: aliceblue;
+  color: #242424;
+}
+
+.taskBtn {
+  width: 10%;
+  padding: 6px 10px;
+  background-color: green;
+  outline: none;
+  border: 0cap;
+  color: aliceblue;
+  font-weight: bold;
+  border-radius: 7px;
+}
+.taskBtn:hover {
+  cursor: pointer;
+  background-color: rgb(6, 167, 6);
+}
+
+.taskArea {
+  background-color: aliceblue;
+  color: #242424;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+

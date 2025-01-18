@@ -8,6 +8,7 @@ import FavCar from './components/FavCar'
 import FoodList from './components/FoodList'
 import Infos from './components/Infos'
 import CarObjects from './components/CarObjects'
+import ToDo from './components/ToDo'
 
 
 function App() {
@@ -29,14 +30,15 @@ function App() {
 
   return (
     <div className='cards'>
-      <ProfWindow user={user}/>
+      {/* <ProfWindow user={user}/>
       <Language user={user}/>
       <YesNoButtons user={user}/>
       <ColorPicker />
       <FavCar />
       <FoodList />
       <Infos />
-      <CarObjects />
+      <CarObjects /> */}
+      <ToDo />
     </div>
   )
 }
