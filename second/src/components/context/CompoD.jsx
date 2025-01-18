@@ -1,9 +1,9 @@
 import { useState, useContext, createContext } from "react";
-import { setMessage } from './CompoA' 
+import { MessageContext } from './CompoA' 
 
 function CompoD() {
 
-    let sendMsg = useContext(setMessage);
+    let sendMsg = useContext(MessageContext);
 
     let [localMessage, setLocalMessage] = useState("");
 
@@ -12,7 +12,7 @@ function CompoD() {
     }
 
     function sendMessage() {
-        setMessage(sendMsg)
+        sendMsg(m => m+=localMessage)
     }
     
     return (
