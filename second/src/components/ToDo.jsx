@@ -18,18 +18,14 @@ function ToDo() {
         </div>
         <div className="window1">
             <div className="taskArea">
-                <p>any task for test</p>
-                <button></button>
-                <button></button>
-                <button></button>
+                <p className="taskP">any task for test</p>
+                <button className="taskDel">delete</button>
+                <button className="taskUp">☝️</button>
+                <button className="taskDown">👇</button>
             </div>
         </div>
     </>
     )
-
-
-
-
 }
 
 export default ToDo
