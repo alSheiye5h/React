@@ -356,6 +356,27 @@
   padding: 4px 18px;
   font-size: 20px;
 }
+
 .buttonRef:hover {
   cursor: pointer;
+}
+
+.ref1 {
+  position: relative;
+  left: 40%;
+}
+
+.ref2 {
+  position: relative;
+  right: 40%;
+}
+
+.ref3 {
+  position: relative;
+  bottom: 40%;
+}
+
+.ref4 {
+  position: relative;
+  top: 40%;
 }
