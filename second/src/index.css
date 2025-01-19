@@ -351,3 +351,11 @@
   width: 60%;
   height: 500px;
 }
+
+.buttonRef {
+  padding: 4px 18px;
+  font-size: 20px;
+}
+.buttonRef:hover {
+  cursor: pointer;
+}

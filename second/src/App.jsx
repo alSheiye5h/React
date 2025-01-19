@@ -10,6 +10,7 @@ import Infos from './components/Infos'
 import CarObjects from './components/CarObjects'
 import ToDo from './components/ToDo'
 import CompoA from './components/context/CompoA'
+import Ref from './components/Ref'
 
 
 
@@ -42,6 +43,7 @@ function App() {
       <CarObjects /> */}
       <ToDo />
       <CompoA />
+      <Ref />
 
     </div>
   )
