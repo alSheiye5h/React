@@ -13,6 +13,67 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.profiles {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  gap: 30px;
+}
+
+.profiles * {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* a {
   font-weight: 500;
   color: #646cff;
